@@ -7,19 +7,14 @@ const weatherBox = document.querySelector(".weather-box")
 const weatherDetails = document.querySelector(".weather-details")
 const error404 = document.querySelector(".not-found")
 
-// Método que puxa os dados da API
-
+// Função que puxa os dados da API
 const getWeatherData = async (city) => {
     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${tokenApi}`);
     const data = await res.json()
     return data;
 }
 
-const celsiusConverte = (temp) =>{
-    const celsius = (temp -32)/1.8
-    return celsius
-}
-
+// Função que mostra os dados na tela
 const showWeatherData = async () => {
     const city = document.querySelector(".search-box input").value
     const data = await getWeatherData(city);
@@ -73,7 +68,7 @@ const showWeatherData = async () => {
 
 }
 
-
+// Captura o evento de clique e dispara as funções
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault()
     showWeatherData()
