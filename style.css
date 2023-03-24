@@ -191,7 +191,7 @@ body {
 footer{
     height: 30px;
     width: 100%;
-    color: white;
+    color: #dff6ff;
     display: flex;
     justify-content: center;
     align-items:  center;
@@ -199,5 +199,5 @@ footer{
     bottom: 0;
     font-weight: 900;
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #06283d;
 }
